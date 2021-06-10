@@ -3,6 +3,8 @@
 :root{
   --primary-white: #ffffff;
   --primary-light-grey:#ece6e6;
+  --primary-grey: #ccd1d9;
+  --primary-dary-grey:#666666;
   --primary-orange: #f9ab00;
   --primary-dark: rgb(52,58,6);
   --primary-red: #ef4035;
@@ -216,4 +218,48 @@ margin: 2rem;
 
 .coursework .box:hover p{
   color: var(--primary-white);
+}
+/*******************EXPERIENCE****************/
+.experience-wrapper{
+  position: relative;
+  padding: 3.125rem;
+  overflow: hidden;
+}
+.experience h1{
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-orange);
+}
+
+.experience-wrapper::before{
+  position: absolute;
+  content:"" ;
+  top: 0;
+  left: 50%;
+  margin-left: 0.125rem;
+  height: 100%;
+  background: var(--primary-grey);
+  z-index: 1;
+}
+.timeline-block{
+  width: calc(50%+0.5rem);
+  display: flex;
+  justify-content: space between;
+  clear: both;
+
+}
+/*------ MEDIA --------*/
+@media(max-width:768px){
+  .experience-container{
+    padding-left: 0%;
+  }
+  .experience-wrapper::before{
+    left: 0.5rem;
+    margin-bottom: 1.875rem;
+  }
+  .timeline-block-left{
+    float:none;
+    direction:ltr ;
+    width: 100%;
+  }
 }
